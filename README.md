@@ -1,73 +1,134 @@
-# React + TypeScript + Vite
+# 🤖 AI CV Analyzer
+### AI-Powered ATS Scoring, CV Analysis & Job Matching System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI CV Analyzer is a full-stack software project designed to analyze resumes (CVs), evaluate their compatibility with Applicant Tracking Systems (ATS), match them with job descriptions, and provide intelligent improvement suggestions using AI techniques.
 
-Currently, two official plugins are available:
+The project aims to simulate a **real-world ATS + AI assistant** used by recruiters and job seekers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 Project Status
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+> ⚠️ **Important Note**  
+> The backend is currently under active development.  
+> Some **minor issues and incomplete parts** may exist and will be **refined and improved in upcoming updates** as part of continuous development.
 
-## Expanding the ESLint configuration
+This repository represents an **ongoing, evolving project**, not a finished product.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Key Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🔹 CV Analysis
+- Extracts CV text and structure
+- Identifies strengths and weaknesses
+- Highlights missing or weak sections
+- Analyzes skills, experience, and keywords
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🔹 ATS Scoring
+- Calculates an ATS compatibility score
+- Detects missing keywords based on job description
+- Simulates real ATS filtering logic
+- Helps improve resume visibility to recruiters
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🔹 Job Matching
+- Compares CV content with job descriptions
+- Generates relevance and similarity scores
+- Suggests suitable job roles based on skills
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🔹 Intelligent CV Rewriting (Planned)
+- AI-powered CV enhancement
+- Improves wording, clarity, and formatting
+- Tailored suggestions based on job requirements
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🏗️ Project Architecture
+
+ai-cv-analyzer
+│
+├── frontend/ # React + TypeScript + Vite + Tailwind CSS
+│
+├── cvbackend-2/ # Backend API & AI logic (under development)
+│
+└── README.md 
+
+
+---
+
+## 🧩 Technology Stack
+
+### 🎨 Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Component-based architecture
+- Clean UI focused on usability
+
+### ⚙️ Backend
+- Backend service for CV processing and analysis
+- RESTful API design
+- Text processing & analysis logic
+- AI / LLM integration (planned & partially implemented)
+
+> ⚠️ Some backend endpoints and logic are still being optimized and refactored.
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Qusai202/ai-cv-analyzer.git
+cd ai-cv-analyzer 
+
+---
+🎯 Use Cases
+
+Job seekers optimizing their CVs
+
+Students preparing resumes for internships
+
+ATS compatibility testing
+
+AI-assisted resume improvement
+
+Educational and portfolio demonstration project
+
+🛣️ Roadmap & Future Enhancements
+
+ Fix and refactor backend issues
+
+ Improve API validation and error handling
+
+ CV upload (PDF / DOCX)
+
+ Job description comparison (advanced)
+
+ AI-powered rewriting using LLMs
+
+ RAG-based CV recommendations
+
+ Authentication & user profiles
+
+ Docker & cloud deployment
+
+👨‍💻 Author
+
+Qusai Harb
+AI & Software Engineer
+
+GitHub: https://github.com/Qusai202
+
+LinkedIn: (https://www.linkedin.com/in/qusai-harb-7a09582a1/)
+
+📄 License
+
+This project is licensed under the MIT License.
+
+---
+⭐ Final Note
+
+This project is part of a learning-driven and real-world oriented development process.
+Improvements, refactoring, and feature expansion are planned as the project evolves.
